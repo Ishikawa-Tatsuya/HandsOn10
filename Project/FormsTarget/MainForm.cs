@@ -43,6 +43,7 @@ namespace FormsTarget
 
         private void ButtonFolderClick(object sender, EventArgs e)
         {
+            //フォルダダイアログの操作は日々テストする程のものではない。
             string path = string.Empty;
             using (var dlg = new FolderBrowserDialog())
             {
@@ -52,6 +53,8 @@ namespace FormsTarget
                 }
                 path = dlg.SelectedPath;
             }
+
+            //ここから先をテストしたい
             ExecuteFilePathCore(path);
         }
 
